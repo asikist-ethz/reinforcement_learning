@@ -18,24 +18,31 @@ In case you find any bugs, you can report them in the Repo as issues!
 The content of the repo and the readme will be updated at times.
 
 ## Prerequisites
-The proposed implementation relies on usage of Python 3.6 or higher. For the environment to work, the usage of conda or miniconda is suggested. This helps to avoid messing up your pc's default python environment. Please find information about installing miniconda in: https://docs.conda.io/en/latest/miniconda.html
-
-In general check the packages that you can install and make sure they satisfy your requirements!
+## Installation Info
+The proposed implementation relies on usage of Python 3.6 or higher.
+For the environment to work, the usage of conda or miniconda is suggested.
+This helps to avoid messing up your pc's default python environment. 
+Please find information about installing miniconda in:
+https://docs.conda.io/en/latest/miniconda.html
 
 Once conda is installed, please create and activate the following environment:
 
+```
 conda create -env abm_sss
 conda activate abm_sss
 # in older version of conda: 
 # source activate abm_sss
-Then it is suggested that you install with pip the following:
+```
 
+Then it is suggested that you install with pip the following:
+```
 pip install jupyter
 pip install pandas
 
 # for plotting
 pip install plotly
 pip install holoviews
+```
 
 ```plotly``` might require some more dependencies to export static images, e.g. via renderers for ```svg``` or ```png```. 
 To enable those you will need the following conda installation (or pip if available):
@@ -44,16 +51,21 @@ To enable those you will need the following conda installation (or pip if availa
 ``` install psutil```
 
 For reinforcement learning, the following libraries are suggested:
-
+```
 pip install tensorforce[tf]
 #for gpu: 
 #pip install tensorforce[tf_gpu]
 pip install stable-baselines[mpi]
-Sometimes the mpi installation may fail with pip, then you can use conda:
+```
 
+Sometimes the mpi installation may fail with pip, then you can use conda:
+```
 conda install mpi4py
 #the retry with stable baselines
+```
 In general openai gym is used by the project. This either comes with the stable-baselines module or you can install it via:
-
+```
 pip install gym
-Once everything is installed, please download or clone the project and use it locally, with your editor of choice, from the rl_markets_code/ directory
+```
+
+Once everything is installed, please download or clone the project and use it locally, with your editor of choice, from the `rl_markets_code/` directory
